@@ -4,6 +4,12 @@
 <p>Welcome to the home page!</p>
 
 <%# all the clubs %>
+<hr>
 <% @clubs.each do |club| %>
-  <h2><%= club.name %></h2>
+<div>
+  <img width="100px" src="<%= club.logo %>" alt="<%= club.name %>">
+  <p><%= club.name %></p>
+  <p><%= club.description %></p>
+</div>
+<hr>
 <% end %>
