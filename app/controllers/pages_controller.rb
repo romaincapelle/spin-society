@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
     def home
+        # => Fetch clubs
+        @clubs = Club.all
     end
 
     def about

@@ -1,2 +1,9 @@
 
 <h1>Home</h1>
+
+<p>Welcome to the home page!</p>
+
+<%# all the clubs %>
+<% @clubs.each do |club| %>
+  <h2><%= club.name %></h2>
+<% end %>
