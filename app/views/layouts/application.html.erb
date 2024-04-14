@@ -11,6 +11,17 @@
   </head>
 
   <body>
+
+    <header>
+        <h1>SpinSociety </h1>
+        <nav>
+          <%= link_to "Home", root_path, alt: "Home" %>
+          <%= link_to "About", about_path, alt: "About" %>
+          <%= link_to "Contact", contact_path, alt: "Contact" %>
+        </nav>
+    </header>
+    <hr>
+
     <%= yield %>
   </body>
 </html>
