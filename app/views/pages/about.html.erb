@@ -1,1 +1,12 @@
 <h1>About</h1>
+
+<form action="/about" method="get">
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.upcase %></li>
+  <% end %>
+</ul>

@@ -1,14 +1,19 @@
 class PagesController < ApplicationController
-  def about
-    # no code to describe the view to render the about page because it is the default behavior of Rails to render the view with the same name as the action name
-    # in this case, the view is app/views/pages/about.html.erb
-    # if you want to render a different view, you can use the render method
-    # render 'pages/other'
-  end
+    def home
+    end
 
-  def contact
-  end
+    def about
+        # => Fetch members of the team
+        @members = ['brian', 'clement', 'romain']
+        # Member.all
 
-  def home
-  end
+        # raise
+
+        if params[:member]
+            @members = @members.select { |member| member.start_with?(params[:member]) }
+        end
+    end
+
+    def contact
+    end
 end
