@@ -1,0 +1,12 @@
+<h1><%= @club.name %></h1>
+<p><%= @club.description %></p>
+
+<%# Edit %>
+<%= link_to "Edit", edit_club_path(@club) %>
+
+<%# Delete %>
+<%= link_to "Delete", club_path(@club), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+<hr>
+<%# back to all clubs %>
+<%= link_to "Back to all clubs", clubs_path %>

@@ -67,3 +67,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+## Added by Romain
+
+# Use faker to generate fake data
+gem 'faker'
