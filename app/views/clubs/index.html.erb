@@ -1,0 +1,18 @@
+
+
+<h1>Clubs</h1>
+
+<%# Create a new club: %>
+<%= link_to "Create a new club", new_club_path %>
+
+<ul>
+<% @clubs.each do |club| %>
+  <li>
+    <%# link %>
+    <%= link_to club.name, club_path(club) %>:
+    <span><%= club.description %></span>
+    <br>
+    <br>
+  </li>
+<% end %>
+</ul>

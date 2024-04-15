@@ -1,0 +1,9 @@
+<%# Create your club %>
+<h1>Edit Club</h1>
+
+<%# partial %>
+<%= render 'form', club: @club %>
+
+<hr>
+<%# back to this club %>
+<%= link_to "Back to this club", club_path(@club) %>

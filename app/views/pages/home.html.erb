@@ -2,14 +2,3 @@
 <h1>Home</h1>
 
 <p>Welcome to the home page!</p>
-
-<%# all the clubs %>
-<hr>
-<% @clubs.each do |club| %>
-<div>
-  <img width="100px" src="<%= club.logo %>" alt="<%= club.name %>">
-  <p><%= club.name %></p>
-  <p><%= club.description %></p>
-</div>
-<hr>
-<% end %>
