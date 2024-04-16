@@ -56,18 +56,24 @@
 <part>id</part>
 </key>
 </table>
-<table x="224" y="74" name="clubs">
+<table x="224" y="49" name="clubs">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="description" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="logo" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="492" y="146" name="challenges">
+<table x="390" y="98" name="competitions">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -104,9 +110,9 @@
 <row name="elevation_gain" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="challenge_id" null="1" autoincrement="0">
+<row name="competition_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="challenges" row="id" />
+<default>NULL</default><relation table="competitions" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -125,9 +131,9 @@
 <row name="date" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="challenge_id" null="1" autoincrement="0">
+<row name="competition_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="challenges" row="id" />
+<default>NULL</default><relation table="competitions" row="id" />
 </row>
 <row name="user_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
@@ -141,7 +147,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="205" y="436" name="challenge_positions">
+<table x="316" y="459" name="challenge_positions">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -149,9 +155,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="users" row="id" />
 </row>
-<row name="challenge_id" null="1" autoincrement="0">
+<row name="competition_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="challenges" row="id" />
+<default>NULL</default><relation table="competitions" row="id" />
 </row>
 <row name="position" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
