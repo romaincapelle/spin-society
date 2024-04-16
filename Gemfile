@@ -72,3 +72,5 @@ end
 
 # Use faker to generate fake data
 gem 'faker'
+gem 'simple_form'
+gem 'sassc-rails'
