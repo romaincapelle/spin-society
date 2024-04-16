@@ -1,0 +1,8 @@
+<h1>New Competition</h1>
+<!-- app/views/reviews/new.html.erb -->
+<%= simple_form_for [@club, @competition] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :length_in_days %>
+  <%= f.input :winner %>
+  <%= f.submit "Submit competition", class: "btn btn-primary" %>
+<% end %>

@@ -1,5 +1,17 @@
+<!-- app/views/clubs/show.html.erb -->
 <h1><%= @club.name %></h1>
 <p><%= @club.description %></p>
+
+<p><strong>Competitions</strong></p>
+<ul class="list-group">
+  <% @club.competitions.each do |the_competition| %>
+    <li class="list-group-item">Starting the <%= the_competition.start_date %> - for <%= the_competition.length_in_days %> days, AND THE WINNER is <%= the_competition.winner %></li>
+    <%= link_to "Delete",
+      competition_path(the_competition),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  <% end %>
+</ul>
 
 <%# Edit %>
 <%= link_to "Edit", edit_club_path(@club) %>

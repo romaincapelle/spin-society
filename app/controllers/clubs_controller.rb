@@ -12,7 +12,7 @@ class ClubsController < ApplicationController
         # raise
         # then im the console you can see the params by typing "params"
 
-        # => Fetch a club # @club = Club.find(params[:id]) is done by the before_action
+        # => Fetch a club -> Done in Private
     end
 p
     def new
@@ -34,7 +34,7 @@ p
     end
 
     def edit
-        # => Fetch a club # @club = Club.find(params[:id]) is done by the before_action
+        # => Fetch a club -> Done in Private
     end
 
     def update
@@ -48,7 +48,7 @@ p
     end
 
     def destroy
-        # => Fetch a club # @club = Club.find(params[:id]) is done by the before_action
+        # => Fetch a club -> Done in Private
         @club.destroy
         redirect_to clubs_path, status: :see_other
     end
